@@ -757,10 +757,11 @@ int btstack_main(int argc, const char * argv[]){
     sco_demo_init();
 
     // Request role change on reconnecting headset to always use them in slave mode
-    hci_set_master_slave_policy(HCI_ROLE_SLAVE);
+    hci_set_master_slave_policy(HCI_ROLE_MASTER);
     // 修改成slave
 
     gap_set_local_name("HFP AG Test Heeiie");
+    gap_ssp_set_io_capability(SSP_IO_CAPABILITY_NO_INPUT_NO_OUTPUT); //changes add gap io
     gap_discoverable_control(1);
 
     // L2CAP

@@ -724,7 +724,7 @@ int btstack_main(int argc, const char * argv[]){
 
     gap_discoverable_control(1);
     gap_set_class_of_device(0x200408);   
-    gap_set_local_name("HFP HF Demo 00:00:00:00:00:00");
+    gap_set_local_name("HFP_HF_Test_Heeiie");
 
     // init L2CAP
     l2cap_init();
